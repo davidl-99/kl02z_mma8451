@@ -48,6 +48,8 @@
  */
 int main(void) {
 
+	status_t resultado;
+
   	/* Init board hardware. */
     BOARD_InitBootPins();
     BOARD_InitBootClocks();
@@ -58,6 +60,12 @@ int main(void) {
 #endif
 
     PRINTF("Hello World\n");
+
+    //Coloca el pin PTB7 en alto
+    resultado=gpioPutLow(KPTB7);
+
+    if(resultado!=kStatus_Success)
+    	printf("error de operacion");
 
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
