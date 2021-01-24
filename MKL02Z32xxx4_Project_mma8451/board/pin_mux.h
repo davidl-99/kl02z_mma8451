@@ -100,6 +100,50 @@ void BOARD_InitPins(void);
  */
 void BOARD_ledPins(void);
 
+/*! @name PORTB3 (number 23), J7[10]/I2C0_SCL/UART0_TX
+  @{ */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_I2C0PINS_ACCEL_SCL_PORT PORTB               /*!<@brief PORT peripheral base pointer */
+#define BOARD_I2C0PINS_ACCEL_SCL_PIN 3U                   /*!<@brief PORT pin number */
+#define BOARD_I2C0PINS_ACCEL_SCL_PIN_MASK (1U << 3U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
+
+/*! @name PORTB4 (number 24), J7[9]/I2C0_SDA/UART0_RX
+  @{ */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_I2C0PINS_ACCEL_SDA_PORT PORTB               /*!<@brief PORT peripheral base pointer */
+#define BOARD_I2C0PINS_ACCEL_SDA_PIN 4U                   /*!<@brief PORT pin number */
+#define BOARD_I2C0PINS_ACCEL_SDA_PIN_MASK (1U << 4U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void BOARD_I2C0Pins(void);
+
+/*! @name PORTA10 (number 21), J8[5]/IRQ_8
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define MA8451_INITPINS_ACCEL_IRQ_8_FGPIO FGPIOA              /*!<@brief FGPIO peripheral base pointer */
+#define MA8451_INITPINS_ACCEL_IRQ_8_GPIO GPIOA                /*!<@brief GPIO peripheral base pointer */
+#define MA8451_INITPINS_ACCEL_IRQ_8_GPIO_PIN_MASK (1U << 10U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define MA8451_INITPINS_ACCEL_IRQ_8_PORT PORTA                /*!<@brief PORT peripheral base pointer */
+#define MA8451_INITPINS_ACCEL_IRQ_8_PIN 10U                   /*!<@brief PORT pin number */
+#define MA8451_INITPINS_ACCEL_IRQ_8_PIN_MASK (1U << 10U)      /*!<@brief PORT pin mask */
+                                                              /* @} */
+
+/*!
+ * @brief Configures pin routing and optionally pin electrical features.
+ *
+ */
+void MA8451_InitPins(void);
+
 #if defined(__cplusplus)
 }
 #endif
