@@ -64,7 +64,8 @@ status_t i2c0MasterInit(uint32_t baud_rate);
  */
 status_t i2c0MasterReadByte(uint8_t *data, uint8_t device_address, int8_t memory_address);
 
-status_t i2c0MasterWriteByte(uint8_t data, uint8_t deviceAddress);
+status_t i2c0MasterWriteByte(uint8_t device_addr, uint8_t reg_addr, uint8_t value);
+
 
 
 
